@@ -1,3 +1,4 @@
+#include "GLL.h"
 #include <stdlib.h>
 GLL newGLL(int size){///////////////////////COMPLETE   (NO INT IN NEWGLL)
 	GLL l;
@@ -49,10 +50,10 @@ void* insertOGLL(GLL* l,void* d,int size,int (*cmp)(void*,void*)){
 }
 
 void destroyGLL(GLL* l){
-// 	while(l->first){
+	while(l->first){
 
-// 	//	free()
-// 	}
+		delPosGLL(l,0);
+	}
 }
 void delPosGLL(GLL* l,int pos){
 	node *n1,*n=l->first;
